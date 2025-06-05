@@ -1,7 +1,7 @@
 <?php
 /** Place the dotenv loader here!
  * If you prefer to use a .env file instead of hardcoding credentials like I have, 
- * you could install a plugin like vlucas/phpdotenv. 
+ * you could install a plugin like vlucas/phpdotenv using composer (see readme). 
  */ 
 
 /**
