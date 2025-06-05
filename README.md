@@ -44,8 +44,17 @@ wp core download               # via WP-CLI
 # or: composer create-project johnpbloch/wordpress .
 
 # 3. Configure environment
-cp .env.example .env           # fill in DB creds, salts
-cp wp-config-sample.php wp-config.php  # or load from .env
+Run the two commands below to copy the sample environment and config files:
+  cp .env.example .env                   # Step 1: Create your environment file
+  cp wp-config-sample.php wp-config.php  # Step 2: Set up WordPress config (if not already done)
+
+Open .env and fill in your database credentials and secret key values. You can generate WordPress salts here: https://api.wordpress.org/secret-key/1.1/salt/
+
+If you're using the .env approach, uncomment the dotenv loader lines at the top of wp-config.php.
+
+Make sure Composer is installed, then run: composer install
+
+You're ready to run WordPress locally!
 
 # 4. Database
 mysql -u root -p \
@@ -119,6 +128,13 @@ Home  (header: Menu | Search)
 └─ User Profile / Dashboard
      └─ Login / Register   (Subscriber)
 
+## Dependencies
+
+This project uses:
+- [WordPress](https://wordpress.org/)
+- [phpdotenv](https://github.com/vlucas/phpdotenv) (BSD-3-Clause License)
+
+> These plugins and libraries may not be included in this repo. Please install them manually or via WP dashboard.
 
 ## License
 
