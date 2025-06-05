@@ -1,8 +1,19 @@
 <?php
-/** Place the dotenv loader here!
- * If you prefer to use a .env file instead of hardcoding credentials like I have, 
- * you could install a plugin like vlucas/phpdotenv using composer (see readme). 
- */ 
+/**
+ * Load environment variables from a .env file (optional)
+ *
+ * To enable this:
+ * 1. Run `composer require vlucas/phpdotenv`
+ * 2. Copy `.env.example` to `.env` and fill in your values
+ * 3. Uncomment the lines below
+ */
+// require_once __DIR__ . '/vendor/autoload.php';
+// Dotenv\Dotenv::createImmutable(__DIR__)->load();
+
+/**
+ * Alternatively, you can hardcode DB credentials and salts below.
+ * Using a .env file is recommended for security and flexibility.
+ */
 
 /**
  * The base configuration for WordPress
