@@ -52,6 +52,12 @@ node_modules/
 # htaccess
 /.htaccess
 
+# Ignore the Wordfence plugin logs
+/wp-content/wflogs
+
+# Wordfence WAF
+wordfence-waf.php
+
 # All plugins
 #
 # Note: If you wish to whitelist plugins,
