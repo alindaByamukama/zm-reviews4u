@@ -42,8 +42,6 @@ node_modules/
 /wp-content/themes/twenty*/
 
 # Example plugin
-/wp-content/plugins/hello.php
-/wp-content/plugins/akismet/
 
 # Uploads
 /wp-content/uploads/
