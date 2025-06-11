@@ -142,6 +142,16 @@ Home  (header: Menu | Search)
 └─ User Profile / Dashboard
      └─ Login / Register   (Subscriber)
 
+### Demo Users
+
+| Role        | Username | Password     | What They Can Do                          |
+|-------------|----------|--------------|-------------------------------------------|
+| Admin       | (set by installer) | Your own choice | Full site access                       |
+| Editor      | editor   | EditorPass!  | Edit & publish all posts                  |
+| Author      | author   | AuthorPass!  | Publish their own posts only              |
+| Contributor | guest    | GuestPass!   | Submit drafts, cannot publish             |
+| Subscriber  | viewer   | ViewerPass!  | View site & manage their profile only     |
+
 ## Dependencies
 
 This project uses:
