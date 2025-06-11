@@ -57,9 +57,23 @@ Make sure Composer is installed, then run: composer install
 You're ready to run WordPress locally!
 
 # 4. Database
-mysql -u root -p \
-  -e "CREATE DATABASE zm_reviews4u CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-wp db import database/zm_reviews4u-schema.sql
+- Log into MariaDB/MySQL: sudo mysql -u root -p
+(Enter the root password you set during mysql_secure_installation.)
+
+- Create the database: 
+  CREATE DATABASE zm_reviews4u CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+  EXIT;
+
+- Ensure your MySQL/MariaDB user has privileges on that database (if you’re using a non-root user, grant them):
+  sudo mysql -u root -p
+
+- Then inside the MariaDB prompt:
+  CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'StrongDBPass123!';
+  GRANT ALL PRIVILEGES ON zm_reviews4u.* TO 'wpuser'@'localhost';
+  FLUSH PRIVILEGES;
+  EXIT;
+
+(You can keep using root if you like, but creating a dedicated wpuser is a good habit.)
 
 # 5. Activate child theme & plugins
 wp theme activate zm-child-theme
